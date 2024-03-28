@@ -1,0 +1,42 @@
+<div>
+  <h3>Angular ui+Book Rest Api</h3>
+
+  <form action="">
+
+    Book ID: <input type="text" name="bookId" [(ngModel)]="book.bookId"/><br/> 
+    Book Name: <input type="text" name="bookName" [(ngModel)]="book.bookName"/><br/> 
+    Book Price: <input type="text" name="bookPrrice" [(ngModel)]="book.bookPrice"/><br/> 
+
+    <input type="submit" value="Save Book" (click)="oninsertClick()"><br/>
+    {{msg}}
+  </form>
+</div>
+
+
+
+<div>
+  <h3>Book Details</h3>
+  <input type="button" value="Get Data" (click)="getData()"/>
+
+
+  <table border="1">
+    <tr>
+      <th>Book Id</th>
+      <th>Book Name</th>
+      <th>Book Price</th>
+      
+    </tr>
+
+    
+      <tr *ngFor="let book of books">
+        <td>{{book.bookId}}</td>
+        <td>{{book.bookName}}</td>
+        <td>{{book.bookPrice}}</td>
+       
+      </tr>
+    
+
+  </table>
+
+
+</div>
