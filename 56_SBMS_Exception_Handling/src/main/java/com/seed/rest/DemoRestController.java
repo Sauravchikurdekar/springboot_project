@@ -35,7 +35,7 @@ public class DemoRestController {
 	
 	
 	@ExceptionHandler(value=ArithmeticException.class)                  //local and globle handling 
-	                                                                                //this globle beacusee it shown in this class only
+	                                                                                //this local beacusee it shown in this class only
 	public ResponseEntity<ExceptionInfo> handelAE(ArithmeticException ae){
 		ExceptionInfo exception=new ExceptionInfo();
 		exception.setMsg(ae.getMessage());
